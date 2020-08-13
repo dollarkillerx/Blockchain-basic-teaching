@@ -96,10 +96,10 @@ func handleWriteBlock(ctx *erguotou.Context) {
 	}
 	atoi, err := strconv.Atoi(dpmString)
 	if err != nil {
-		ctx.Json(400,err)
+		ctx.Json(400, err)
 		return
 	}
-	block, err := generateBlock(Blockchain[len(Blockchain)-1],atoi )
+	block, err := generateBlock(Blockchain[len(Blockchain)-1], atoi)
 	if err != nil {
 		ctx.Json(500, err)
 		return
